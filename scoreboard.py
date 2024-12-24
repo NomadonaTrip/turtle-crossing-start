@@ -1,6 +1,7 @@
 from turtle import Turtle
 
-FONT = ("Courier", 24, "normal")
+FONT = ("Courier", 18, "normal")
+ENDGAME_FONT = ("Courier", 24, "bold")
 
 
 class Scoreboard(Turtle):
@@ -9,7 +10,7 @@ class Scoreboard(Turtle):
         self.level = 1
         self.penup()
         self.hideturtle()
-        self.goto(x= -250, y = 250)
+        self.goto(x= -260, y = 250)
         self.write(f"Level: {self.level}", False, font=FONT)
 
     def level_up(self):
@@ -19,7 +20,7 @@ class Scoreboard(Turtle):
 
     def end_game(self):
         self.goto(x= 0, y = 0)
-        self.write(arg = "Game Over", move = False, font = FONT)
+        self.write(arg = "Game Over", align= 'center', font = ENDGAME_FONT)
 
 
 
